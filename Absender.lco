@@ -1,0 +1,60 @@
+\ProvidesFile{absender.lco}
+\RequirePackage{ngerman}
+\RequirePackage{fix-cm}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\KOMAoptions{
+        paper=a4,
+        pagenumber=botcenter,
+        fromalign=right,
+        fromrule=afteraddress,
+        fromphone,
+        fromlogo,
+        fromurl,
+        fromemail,
+        backaddress,
+        foldmarks,
+        headsepline,
+        footsepline,
+        enlargefirstpage
+}
+\setkomavar{fromname}{Vorname Nachname}
+\setkomavar{fromaddress}{Strasse~Hausnummer}
+\setkomavar{fromphone}{012345 / 67890}
+\setkomavar{fromemail}{email@domain.tld}
+\setkomavar{fromurl}{\url{www.website.de}}
+\setkomavar*{urlseparator}{}
+\setkomavar{urlseparator}{}
+\setkomavar{frombank}{}
+\setkomavar{place}{}
+\setkomavar{fromlogo}{\parbox[b]{8cm}{\usekomafont{fromaddress}%
+        {\mbox{\LARGE \bfseries Vorname~Nachname}}
+        \smallskip}
+}
+
+\setkomafont{backaddress}{\sffamily}
+\setkomafont{fromaddress}{\sffamily}
+\addtokomafont{fromname}{\scriptsize}
+\addtokomafont{fromaddress}{\scriptsize}
+\pagestyle{headings}
+
+
+% Kopf --------------------------------------------------------------------
+\makeatletter\setkomavar{firsthead}{%
+  \textbf{\usekomavar{fromname}}\\
+  \rule[1ex]{\textwidth}{.4pt}
+  \hspace*{\fill}\footnotesize
+  \begin{tabular}{l@{}}
+    \usekomavar{fromaddress}
+    \if@phone\\
+      \usekomavar*{fromphone}\usekomavar{fromphone}\fi
+    \if@fax\\
+      \usekomavar*{fromfax}\usekomavar{fromfax}\fi
+    \if@email\\
+      \usekomavar*{fromemail}\usekomavar{fromemail}\fi
+    \if@www\\
+      \usekomavar*{fromurl}\usekomavar{fromurl}\fi
+    \end{tabular}%
+}\makeatother

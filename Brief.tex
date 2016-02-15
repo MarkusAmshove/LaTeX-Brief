@@ -1,0 +1,35 @@
+\documentclass[%
+  fontsize=12pt,
+  version=last
+]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\LoadLetterOption{DIN}
+\LoadLetterOption{Absender}
+\usepackage{lmodern}
+\usepackage{graphicx}
+
+
+\begin{document}
+\begin{letter}{% Empfänger
+  Max Mustermann\\
+  Musterweg 43\\
+  12345 Entenhausen%
+}
+
+\setkomavar{yourref}{}          % Ihr Zeichen
+\setkomavar{yourmail}{}         % Ihr Schreiben vom
+\setkomavar{myref}{}            % Unser Zeichen
+\setkomavar{customer}{}         % Kundennummer
+\setkomavar{invoice}{}          % Rechnungsnummer
+\setkomavar{date}{\today}       % Datum
+\setkomavar{title}{}            % Titel
+\setkomavar{subject}{Betreff}
+
+\opening{Sehr geehrter Herr Mustermann,}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\closing{Mit freundlichen Grüßen,}
+\end{letter}
+\end{document}
