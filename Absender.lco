@@ -1,4 +1,4 @@
-\ProvidesFile{absender.lco}
+\ProvidesFile{Absender.lco}
 \RequirePackage{ngerman}
 \RequirePackage{fix-cm}
 \RequirePackage[T1]{fontenc}
