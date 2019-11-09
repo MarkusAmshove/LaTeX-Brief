@@ -5,8 +5,10 @@ Sie nutzt [Koma-Skript](http://www.komascript.de/) und [scrlttr2](https://www.ct
 
 # Verwendung der Vorlage
 
-Die eigenen Daten müssen einmalig in der [Absender.lco](https://github.com/MarkusAmshove/LaTeX-Brief/blob/master/Absender.lco) eingegeben werden.
-Anschließend können `Brief.tex` und `Absender.lco` für jeden neuen Brief kopiert und mit LaTeX kompiliert werden, wobei der Inhalt des Briefes in `Brief.tex` steht.
+Die eigenen Daten müssen einmalig in der [BriefEinstellungen.lco](https://github.com/MarkusAmshove/LaTeX-Brief/blob/master/BriefEinstellungen.lco) eingegeben werden.
+Anschließend können `Brief.tex` und `BriefEinstellungen.lco` für jeden neuen Brief kopiert und mit LaTeX kompiliert werden, wobei der Inhalt des Briefes in `Brief.tex` steht.
+
+`BriefEinstellungen.lco` kann auch global eingestellt werden, indem sie in `TEXMFLOCAL` (unter Linux ~/texmf) abgelegt wird. Der korrekte Pfad ist `$TEXMFLOCAL/tex/latex/BriefEinstellungen.lco`
 
 # Verwendung in PowerShell
 
